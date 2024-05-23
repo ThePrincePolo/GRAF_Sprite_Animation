@@ -1,9 +1,182 @@
-[gd_scene load_steps=2 format=3 uid="uid://l6kjlcn71v8h"]
+[gd_scene load_steps=25 format=3 uid="uid://l6kjlcn71v8h"]
 
-[ext_resource type="PackedScene" uid="uid://dnjlgf3qam2nq" path="res://Characters/player_character_main.tscn" id="2_3esdj"]
+[ext_resource type="Texture2D" uid="uid://bslv18h2meojn" path="res://Tilesets/Column_Tower.png" id="2_2yl1e"]
+[ext_resource type="PackedScene" uid="uid://brtxbyy3hfea4" path="res://Characters/Players/player_character_main.tscn" id="2_3esdj"]
+[ext_resource type="Texture2D" uid="uid://ywhr74cr6475" path="res://Tilesets/CobblePathTileSheet3.png" id="3_6lvu6"]
+[ext_resource type="Texture2D" uid="uid://c566xubq302p0" path="res://Assets/UnderwaterLandscape.png" id="3_y31j2"]
+[ext_resource type="Texture2D" uid="uid://bj6thd0ihe58l" path="res://Assets/LogsAndWalls.png" id="4_612yn"]
+[ext_resource type="Texture2D" uid="uid://djv52mavbehie" path="res://Assets/Bush.png" id="5_ebcau"]
+[ext_resource type="Texture2D" uid="uid://b752brm8qfqvh" path="res://Assets/SmallTree.png" id="6_rtwia"]
+[ext_resource type="Texture2D" uid="uid://bvewl6kc6gxax" path="res://Assets/WaterEdgeTiles.png" id="7_6wtpi"]
+[ext_resource type="Shader" path="res://Shaders/Realistic_Water/main.gdshader" id="9_b07br"]
+[ext_resource type="Texture2D" uid="uid://4hrm2illjrg6" path="res://Tilesets/water/sprite_waterv013.png" id="10_ye3o3"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ykr0q"]
+texture = ExtResource("2_2yl1e")
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+4:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+4:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+3:3/0 = 0
+4:3/0 = 0
+0:4/0 = 0
+1:4/0 = 0
+2:4/0 = 0
+3:4/0 = 0
+4:4/0 = 0
+0:5/0 = 0
+1:5/0 = 0
+2:5/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vr4px"]
+texture = ExtResource("3_6lvu6")
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hdc20"]
+texture = ExtResource("3_y31j2")
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_o2ptj"]
+texture = ExtResource("4_612yn")
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_s3lha"]
+texture = ExtResource("5_ebcau")
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qcbb3"]
+texture = ExtResource("6_rtwia")
+0:0/0 = 0
+1:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8rnqk"]
+texture = ExtResource("7_6wtpi")
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_0emog"]
+sources/0 = SubResource("TileSetAtlasSource_ykr0q")
+sources/1 = SubResource("TileSetAtlasSource_vr4px")
+sources/3 = SubResource("TileSetAtlasSource_o2ptj")
+sources/4 = SubResource("TileSetAtlasSource_s3lha")
+sources/5 = SubResource("TileSetAtlasSource_qcbb3")
+sources/2 = SubResource("TileSetAtlasSource_hdc20")
+sources/6 = SubResource("TileSetAtlasSource_8rnqk")
+
+[sub_resource type="Gradient" id="Gradient_vn7mg"]
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_6j8j4"]
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_33jwv"]
+seamless = true
+color_ramp = SubResource("Gradient_vn7mg")
+noise = SubResource("FastNoiseLite_6j8j4")
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_rmh7g"]
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_pkdsv"]
+seamless = true
+noise = SubResource("FastNoiseLite_rmh7g")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_mep7n"]
+shader = ExtResource("9_b07br")
+shader_parameter/scroll1 = Vector2(0.05, 0.05)
+shader_parameter/scroll2 = Vector2(-0.05, -0.05)
+shader_parameter/distortion_strength = 0.032
+shader_parameter/tone_color = Color(0.227451, 0.470588, 0.92549, 1)
+shader_parameter/top_color = Color(1, 0.996078, 1, 1)
+shader_parameter/light_start = 0.31
+shader_parameter/light_end = 0.645
+shader_parameter/noise1 = SubResource("NoiseTexture2D_33jwv")
+shader_parameter/noise2 = SubResource("NoiseTexture2D_pkdsv")
 
 [node name="Node2D" type="Node2D"]
 
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = SubResource("TileSet_0emog")
+format = 2
+layer_0/name = "BaseGround"
+layer_0/z_index = -5
+layer_1/name = "TopGround"
+layer_1/enabled = true
+layer_1/modulate = Color(1, 1, 1, 1)
+layer_1/y_sort_enabled = false
+layer_1/y_sort_origin = 0
+layer_1/z_index = -5
+layer_1/tile_data = PackedInt32Array()
+layer_2/name = "AboveWater"
+layer_2/enabled = true
+layer_2/modulate = Color(1, 1, 1, 1)
+layer_2/y_sort_enabled = false
+layer_2/y_sort_origin = 0
+layer_2/z_index = 0
+layer_2/tile_data = PackedInt32Array()
+
 [node name="PlayerCharacterMain" parent="." instance=ExtResource("2_3esdj")]
-position = Vector2(106, 62)
+position = Vector2(151, 85)
+move_speed = 65.0
 start_direction = Vector2(2.08165e-12, 1)
+
+[node name="SpriteWaterv013" type="Sprite2D" parent="."]
+visible = false
+z_index = -5
+material = SubResource("ShaderMaterial_mep7n")
+position = Vector2(368, 248)
+scale = Vector2(6, 5)
+texture = ExtResource("10_ye3o3")
