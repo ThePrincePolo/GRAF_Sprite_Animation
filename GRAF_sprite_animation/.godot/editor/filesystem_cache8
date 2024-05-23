@@ -1,0 +1,18 @@
+ea4bc82a6ad023ab7ee23ee620429895
+::res://::1716431027
+export_presets.cfg::TextFile::-1::1714868186::0::1::::<><>::
+icon.svg::CompressedTexture2D::543318262774837566::1714868186::1716431027::1::::<><>::
+main.tscn::PackedScene::836696813947948973::1714868186::0::1::::<><>::uid://dnjlgf3qam2nq::::res://Characters/player_character_main.tscn
+::res://Assets/::1714868186
+Giraffe (1).png::CompressedTexture2D::8045448270544373988::1714868186::1716431027::1::::<><>::
+Giraffe.png::CompressedTexture2D::14143027031008166::1714868186::1716431027::1::::<><>::
+Walking Animations v6.png::CompressedTexture2D::364375756445829593::1714868186::1716431027::1::::<><>::
+::res://Characters/::1714868186
+player_character.gd::GDScript::-1::1714868186::0::1::::<>CharacterBody2D<>::
+player_character.tscn::PackedScene::986943399028870699::1714868186::0::1::::<><>::uid://fgrhlc66oild::::res://Assets/Walking Animations v6.png<>res://Characters/player_character.gd
+player_character_main.gd::GDScript::-1::1714868186::0::1::::<>CharacterBody2D<>::
+player_character_main.tscn::PackedScene::8090975326442867094::1714868186::0::1::::<><>::uid://dmvjmflt4bd77::::res://Assets/Giraffe (1).png<>res://Characters/player_character_main.gd
+::res://docs/::1714868186
+index.apple-touch-icon.png::CompressedTexture2D::4997241987531737650::1714868186::1716431027::1::::<><>::
+index.icon.png::CompressedTexture2D::6283970843626058847::1714868186::1716431027::1::::<><>::
+index.png::CompressedTexture2D::7461226506376860260::1714868186::1716431027::1::::<><>::
