@@ -1,13 +1,10 @@
-[gd_scene load_steps=25 format=3 uid="uid://l6kjlcn71v8h"]
+[gd_scene load_steps=31 format=3 uid="uid://l6kjlcn71v8h"]
 
 [ext_resource type="Texture2D" uid="uid://bslv18h2meojn" path="res://Tilesets/Column_Tower.png" id="2_2yl1e"]
 [ext_resource type="PackedScene" uid="uid://brtxbyy3hfea4" path="res://Characters/Players/player_character_main.tscn" id="2_3esdj"]
 [ext_resource type="Texture2D" uid="uid://ywhr74cr6475" path="res://Tilesets/CobblePathTileSheet3.png" id="3_6lvu6"]
-[ext_resource type="Texture2D" uid="uid://c566xubq302p0" path="res://Assets/UnderwaterLandscape.png" id="3_y31j2"]
-[ext_resource type="Texture2D" uid="uid://bj6thd0ihe58l" path="res://Assets/LogsAndWalls.png" id="4_612yn"]
-[ext_resource type="Texture2D" uid="uid://djv52mavbehie" path="res://Assets/Bush.png" id="5_ebcau"]
-[ext_resource type="Texture2D" uid="uid://b752brm8qfqvh" path="res://Assets/SmallTree.png" id="6_rtwia"]
-[ext_resource type="Texture2D" uid="uid://bvewl6kc6gxax" path="res://Assets/WaterEdgeTiles.png" id="7_6wtpi"]
+[ext_resource type="Texture2D" uid="uid://cs2o1ykl67k1c" path="res://Assets/black.jpg" id="8_iyq60"]
+[ext_resource type="Texture2D" uid="uid://d1h06a3fix2j0" path="res://Assets/comingsoon.jpg" id="8_ntvfv"]
 [ext_resource type="Shader" path="res://Shaders/Realistic_Water/main.gdshader" id="9_b07br"]
 [ext_resource type="Texture2D" uid="uid://4hrm2illjrg6" path="res://Tilesets/water/sprite_waterv013.png" id="10_ye3o3"]
 
@@ -59,8 +56,11 @@ texture = ExtResource("3_6lvu6")
 0:3/0 = 0
 1:3/0 = 0
 
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_3biye"]
+load_path = "res://.godot/imported/UnderwaterLandscape.png-825e7b18a7276a7feec28df9cfac53a8.ctex"
+
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hdc20"]
-texture = ExtResource("3_y31j2")
+texture = SubResource("CompressedTexture2D_3biye")
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
@@ -72,9 +72,12 @@ texture = ExtResource("3_y31j2")
 2:2/0 = 0
 0:3/0 = 0
 1:3/0 = 0
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_ou8tr"]
+load_path = "res://.godot/imported/LogsAndWalls.png-94d48ec987477bc851a114203e7f45a3.ctex"
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_o2ptj"]
-texture = ExtResource("4_612yn")
+texture = SubResource("CompressedTexture2D_ou8tr")
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
@@ -87,19 +90,28 @@ texture = ExtResource("4_612yn")
 0:3/0 = 0
 1:3/0 = 0
 
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_fafgc"]
+load_path = "res://.godot/imported/Bush.png-81b560f4b520438266ccb98d9a779b0b.ctex"
+
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_s3lha"]
-texture = ExtResource("5_ebcau")
+texture = SubResource("CompressedTexture2D_fafgc")
 0:0/0 = 0
 
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_c4yqf"]
+load_path = "res://.godot/imported/SmallTree.png-bb5ceeb4896f2efba2e6151a853bbe04.ctex"
+
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qcbb3"]
-texture = ExtResource("6_rtwia")
+texture = SubResource("CompressedTexture2D_c4yqf")
 0:0/0 = 0
 1:0/0 = 0
 0:1/0 = 0
 1:1/0 = 0
 
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_3xr8q"]
+load_path = "res://.godot/imported/WaterEdgeTiles.png-807ee6d28df6c02435f7cc7323e2481a.ctex"
+
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8rnqk"]
-texture = ExtResource("7_6wtpi")
+texture = SubResource("CompressedTexture2D_3xr8q")
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
@@ -146,6 +158,18 @@ shader_parameter/light_end = 0.645
 shader_parameter/noise1 = SubResource("NoiseTexture2D_33jwv")
 shader_parameter/noise2 = SubResource("NoiseTexture2D_pkdsv")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6arbx"]
+size = Vector2(20, 167)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rakks"]
+size = Vector2(343.5, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fep5e"]
+size = Vector2(20, 169)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7vjkd"]
+size = Vector2(343, 20)
+
 [node name="Node2D" type="Node2D"]
 
 [node name="TileMap" type="TileMap" parent="."]
@@ -168,8 +192,18 @@ layer_2/y_sort_origin = 0
 layer_2/z_index = 0
 layer_2/tile_data = PackedInt32Array()
 
+[node name="Black" type="Sprite2D" parent="."]
+position = Vector2(163, 83)
+scale = Vector2(20, 20)
+texture = ExtResource("8_iyq60")
+
+[node name="Comingsoon" type="Sprite2D" parent="."]
+position = Vector2(160, 94)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("8_ntvfv")
+
 [node name="PlayerCharacterMain" parent="." instance=ExtResource("2_3esdj")]
-position = Vector2(151, 85)
+position = Vector2(164, 82)
 move_speed = 65.0
 start_direction = Vector2(2.08165e-12, 1)
 
@@ -180,3 +214,21 @@ material = SubResource("ShaderMaterial_mep7n")
 position = Vector2(368, 248)
 scale = Vector2(6, 5)
 texture = ExtResource("10_ye3o3")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(11, 87)
+shape = SubResource("RectangleShape2D_6arbx")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(151.25, 161)
+shape = SubResource("RectangleShape2D_rakks")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(313, 84.5)
+shape = SubResource("RectangleShape2D_fep5e")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(151.5, 11)
+shape = SubResource("RectangleShape2D_7vjkd")

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bvewl6kc6gxax"
-path="res://.godot/imported/WaterEdgeTiles.png-807ee6d28df6c02435f7cc7323e2481a.ctex"
+uid="uid://d1h06a3fix2j0"
+path="res://.godot/imported/comingsoon.jpg-476b9e708e49158d96073df826a603dd.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/WaterEdgeTiles.png"
-dest_files=["res://.godot/imported/WaterEdgeTiles.png-807ee6d28df6c02435f7cc7323e2481a.ctex"]
+source_file="res://Assets/comingsoon.jpg"
+dest_files=["res://.godot/imported/comingsoon.jpg-476b9e708e49158d96073df826a603dd.ctex"]
 
 [params]
 
